@@ -11,8 +11,18 @@ const PORT = 4000
 app.use(cors())
 app.use(express.json())
 
+//gets
 app.get('/allProducts', controllers.getAllProducts)
 app.get('/product/:id', controllers.getProduct)
+
+//patch
+app.patch('/product/:id', controllers.updateProduct)
+
+//delete
+app.delete('/product/:id', controllers.deleteProduct)
+
+//post
+app.post('/createProduct', controllers.createProduct)
 
 loadData()
 
