@@ -12,6 +12,7 @@ app.use(cors())
 app.use(express.json())
 
 app.get('/allProducts', controllers.getAllProducts)
+app.get('/product/:id', controllers.getProduct)
 
 loadData()
 
